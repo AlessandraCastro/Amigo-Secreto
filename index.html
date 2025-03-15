@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -20,17 +19,17 @@
         <section class="input-section">
             <h2 class="section-title">Digite o nome dos seus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="nomeAmigo" class="input-name" placeholder="Digite o nomedo amigo">
-                <button class="button-add" onclick="adicionarAmigo()">Adicionar Amigo</button>
+                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+                <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
            
-            <ul id="listaAmigos"></ul></ul>
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()">Sortear Amigo</button>
-                <p id="resultadoSorteio"></p>
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícone para sortear">
+                    Sortear amigo
                 </button>
             </div>
         </section>
@@ -39,3 +38,4 @@
     <script src="app.js" defer></script>
 </body>
 </html>
+
